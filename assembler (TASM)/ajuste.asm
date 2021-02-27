@@ -28,7 +28,7 @@ main proc FAR
 	       mov    ah,4ch                      	;funcion que finaliza un programa
 	       int    21h
 
-	       ret
+	       ret					; retorna el procedimiento
 main endp
 codigo ends
 end main
