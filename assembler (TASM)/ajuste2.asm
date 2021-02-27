@@ -1,7 +1,6 @@
 ; Ajustes parte 2 
 ; este programa permite al usuario ingresar un numero por teclado
 ; y mostrarse en pantalla usando los ajustes...
-
 .286
 pila segment stack  ; segmento de pila
     db 32 DUP('stack--')
