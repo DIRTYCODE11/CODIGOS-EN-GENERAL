@@ -1,0 +1,22 @@
+; LIBRERIA.LIB
+; CONTIENE LAS LOS MACROS Y PROCEDIMIENTOS PARA NUESTRO PROGRAMA
+print macro cadena
+	; PUEDES DESCOMENTAR PUSHA Y POPA PARA VER SI CON ESO QUEDA TU PROGRAMA
+	; pusha
+	mov ah,09h
+	lea dx,cadena
+	int 21h
+	; popa
+endm  ; FIN MACRO
+
+.code 
+; IMPORTANTE DEFINIR EL SEGMENT CODE ANTES DE HACER UN PROCEDIMIENTO
+clscr proc 
+	mov ah,06h      ; funcion que dezplaza lineas hacia arriba (limpiar pantalla)
+    mov al,00h      ; modo de video
+    mov bh,0fh      ; atributo a usar: el primer digito es el color de la pantalla el segundo el del texto
+    mov cx,0000h    ; filas y columnas donde empezara 
+    mov dx,184fh    ; filas y columnas donde acabara la limpieza de pantalla
+    int 10h
+    ret
+endp		; FIN DE PROCEDIMIENTO
