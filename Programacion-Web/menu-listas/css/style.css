@@ -1,0 +1,25 @@
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+ul {
+  list-style-type: none;
+  background-color: brown;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+li a:hover {
+  background-color: crimson;
+}
